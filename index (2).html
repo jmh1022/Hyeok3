@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>날씨 정보 앱</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>날씨 정보</h1>
+    
+    <div class="search-container">
+      <input type="text" id="cityInput" placeholder="도시명을 입력하세요 (예: Seoul, London)">
+      <button id="searchBtn">검색</button>
+    </div>
+
+    <div id="loading" class="loading hidden">날씨 정보를 가져오는 중...</div>
+    
+    <div id="weatherInfo" class="weather-info hidden">
+      <div class="weather-card">
+        <div class="weather-header">
+          <h2 id="cityName"></h2>
+          <p id="currentTime"></p>
+        </div>
+        
+        <div class="weather-main">
+          <div class="temperature">
+            <span id="temperature"></span>
+            <img id="weatherIcon" alt="날씨 아이콘">
+          </div>
+          <div class="weather-details">
+            <p id="weatherCondition"></p>
+            <p>체감온도: <span id="feelsLike"></span></p>
+            <p>습도: <span id="humidity"></span></p>
+            <p>풍속: <span id="windSpeed"></span></p>
+            <p>가시거리: <span id="visibility"></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="error" class="error hidden">
+      <p>날씨 정보를 가져올 수 없습니다. 도시명을 확인해주세요.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
